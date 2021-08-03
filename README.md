@@ -39,3 +39,9 @@ You can create other environments besides `production`. Just create a folder nex
 I will show you how to plan/apply the different environments in the next step.
 
 ### 6. Execute your code
+
+As already stated, this project is based on [this central Makefile](https://github.com/florianroesler/gitlab-terraform-shared-state/blob/main/Makefile), which holds all important commands.
+
+If you have Docker and docker-compose installed, you can simply run the commands from it without any modifications. The main commands are `make init-{environment}`, `make plan-{environment}` and `make apply-{environment}`. Replace the `{environment}` placeholder with the environment you want to run the command for, e.g. `make init-production`.
+
+If you want to run the code without docker-compose on your host OS, then simply replace the `docker-compose run $(docker_compose_service_name)` parts in the Makefile with `terraform`.
