@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  terraform_infrastructure:
+    image: hashicorp/terraform:1.0.1
+    volumes:
+      - .:/app
+    environment:
+      - TF_LOG=DEBUG
